@@ -1,0 +1,11 @@
+$color-theme: rgba(0,165,145,1);
+$color-theme-hover: rgba(0,100,87,1);
+
+$section-padding-ltr: 50px;
+
+$align-content: flex-start,flex-end,center,space-between,stretch,space-around;
+$align-items: flex-start, flex-end,center,stretch,baseline;
+
+$type-alert: 
+    ("danger" : rgba(248,215,218,1), "success" : rgba(212,237,218,1), "default" : rgba(214,216,217,1))
+;

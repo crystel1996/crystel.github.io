@@ -1,0 +1,260 @@
+html,body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:16px;
+    width:100%;
+    min-height:650px;
+    line-height:1.6em;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration:none;
+    color:$color-theme;
+    transition: 0.3s;
+    &:hover{
+        color:$color-theme-hover;
+        text-decoration: none;
+    }
+}
+
+ul li {
+    display:inline-block;
+    list-style:none;
+}
+
+p{
+    word-break: break-word;
+}
+
+textarea{
+    resize:none;
+}
+
+button{
+    padding:8px 16px;
+    margin:10px 0;
+    background:none;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition: 0.3s;
+    &.btn-theme{
+        border:1px solid $color-theme;
+        &.btn-radius{
+            border-radius:5px;
+        }
+        &.btn-dark{
+            color:black;
+            background:$color-theme;
+            &:hover{
+                color:white;
+            }
+        }
+        &.btn-light{
+            color:$color-theme;
+            &:hover{
+                color:white;
+            }
+        }
+        &.btn-black{
+            color:white;
+            background:black;
+        }
+        &:hover{
+            background:$color-theme-hover;
+        }
+    }
+}
+
+form{
+    & label{
+        display:block;
+    }
+    & input, & select, & textarea{
+        border:1px solid $color-theme;
+        padding:8px;
+        color:whitesmoke;
+        background:none;
+    }
+}
+
+.danger{
+    color:red;
+}
+
+/* --------- MODAL Style -------------- */
+.block-modal {
+    position:fixed;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    z-index:11;
+    background-color:rgba(0,0,0,0.7);
+    & .modal{
+        position:fixed;
+        left:0%;
+        top:0%;
+        z-index:10;
+        width:60%;
+        height:100%;
+        transform:translateX(35%);
+        & .modal-content{
+            margin:10% auto;
+            width:80%;
+            border-radius:5px;
+            padding:10px;
+            background-color: white;
+            & .modal-title{
+                padding:10px 0;
+                font-size:1.8em;
+                border-bottom: 3px solid $color-theme;
+                @extend %flex-row-sb;
+                @extend %align-content-center;
+                & h3 {
+                    line-height:1.6em;
+                }
+                & .modal-close{
+                    font-size:16px;
+                }
+            }
+            & .modal-body{
+                max-height:350px;
+                overflow-y: auto;
+                padding:10px 0;
+                border-bottom:3px solid $color-theme;
+                @extend %flex-row-center;
+                @extend %flex-wrap;
+                & .modal-content-img{
+                    & img {
+                        width:100%;
+                        height:200px;
+                    }
+                }
+                & .modal-content-text{
+                    margin-left:10px;
+                    & ul li{
+                        display:inherit;
+                        &::before{
+                            content:'- ';
+                        }
+                    }
+                }
+            }
+            & .modal-footer{
+                padding:10px 0;
+            }
+        }
+    }
+}
+
+/*-----------------------------------*/
+.animate-opacity{
+    animation-name:animate-opacity;
+    animation-duration:2s;
+}
+
+.animate-transform-rect-left{
+    animation-name:animate-transform-rect-left;
+    animation-duration:3s;
+}
+
+.animate-transform-rect-right{
+    animation-name:animate-transform-rect-right;
+    animation-duration:3s;
+}
+
+/* Opacity du section et de l'user profile */
+
+#user-profile, section{
+    opacity:0;
+}
+
+/*--- Progress scroll ---*/
+.progress-scroll{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9999;
+    & #progress-scroll-content{
+        background-color:$color-theme;
+        width:0%;
+        height:5px;
+    }
+}
+
+/*--------Navigation-toggle --------*/
+
+.navigation-toggle, .nav-dropdown-close{
+    display:none;
+}
+
+/*--------------Alert----------------------*/
+
+.alert{
+    @extend %flex-row-sb;
+    padding:10px;
+    color:black;
+    @each $variant,$color in $type-alert{
+        &.alert-#{$variant}{
+            background:$color;
+            border-radius:5px;
+        }
+    }
+    & .alert-close{
+        cursor:pointer;
+        font-weight:bold;
+    }
+}
+
+@media (max-width:992px){
+    .navigation-toggle{
+        display:block
+    }
+    .nav-collapse{
+        display:none;
+    }
+    .nav-dropdown-content{
+        height:100%;
+        width:0;
+        position:fixed;
+        z-index:10;
+        left:0;
+        top:0;
+        background-color:rgba(0,0,0,1);
+        overflow:hidden;
+        transition: 0.5s;
+        & .nav-dropdown-close{
+            display:block;
+            font-size:2em;
+            color:white;
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        & .navigation-menu{
+            position:relative;
+            top:25%;
+            width:100%;
+            text-align:center;
+            margin-top:25px;
+            & ul li{
+                display:inherit;
+                padding:15px 0 !important;
+                font-size:2em;
+                & a{
+                    text-align:center;
+                }
+            }
+        }
+    }
+
+    .block-modal{
+        & .modal{
+            width:100%;
+            transform:translateX(0%);
+        }
+    }
+}

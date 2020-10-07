@@ -1,0 +1,140 @@
+@media all and  (max-width:992px){
+    .home-action{
+        & .text-action{
+            width:100%;
+        }
+    }
+    section{
+        & .skill-content{
+            & .skill-item{
+                margin:10px;
+                margin-left:0;
+            }
+        }
+    }
+    
+}
+
+@media all and (max-width:768px){
+    .home-action{
+        & .home-user-profile{
+            bottom:-55px;
+            margin-left:calc(50% - 45px);
+            & img{
+                max-width:100px;
+            }
+        }
+    }
+    section{
+        & .project-content{
+            & .project-item{
+                max-width:95%;
+            }
+        }
+        & .about-content{
+           &::after{
+               left:0px;
+           }
+           & .about-item{
+                width:100%;
+                &.left::after, &.right::after{
+                   left:-12px;
+                }
+                &.left::before, &.right::before{
+                    content: "";
+                    height:0;
+                    position:absolute;
+                    top:22px;
+                    width:0;
+                    z-index:1;
+                    left:20px;
+                    border:medium solid $color-theme;
+                    border-width:10px 10px 10px 0;
+                    border-color: transparent $color-theme transparent transparent;
+                }
+                &.left{
+                    padding-right:0;
+                }
+                &.right{
+                   left:0%; 
+                   padding-left:0;
+                }
+                & .about-item-content{
+                   margin-left:30px;
+                }
+           }
+        }
+        & .skill-content{
+            & .skill-item{
+                width:100%;
+                text-align:center;
+            }
+        }
+        &.contact{
+            & .contact-content{
+                & .contact-item{
+                    & .list-contact{
+                        & ul li{
+                            & span{
+                                margin-right:5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        padding:25px;
+    }
+}
+
+@media all and (max-width:600px){
+    .navigation{
+        padding:25px;
+        & .navigation-logo{
+            font-size:2em;
+        }
+    }
+
+    .home-action{
+        & .text-action{
+            font-size:1.8em;
+        }
+    }
+
+    section{
+        padding:25px;
+        & .section-title{
+            & h2{
+                font-size:1.8em;
+            }
+        }
+        & .skill-content{
+            & .skill-item{
+                & .skill-img img{
+                    width:80px;
+                    height:80px;
+                }
+                & .skill-about{
+                    & h3{
+                        font-size:1.1em;
+                    }
+                }
+            }
+        }
+        & .services-content{
+            & .services-item{
+                width:100%;
+                padding:25px 0;
+            }
+        }
+        & .about-content{
+            & .about-item{
+                & .about-item-content{
+                    padding:5px;
+                }
+            }
+        }
+    }
+}

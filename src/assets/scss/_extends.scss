@@ -1,0 +1,91 @@
+%flex-row{
+    display:flex;
+    flex-direction:row;
+}
+
+%flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+%flex-column-center{
+    @extend %flex-column;
+    justify-content:center;
+}
+
+%flex-row-sb{
+    @extend %flex-row;
+    justify-content:space-between;
+}
+
+%flex-row-sa{
+    @extend %flex-row;
+    justify-content:space-around;
+}
+
+%flex-row-center{
+    @extend %flex-row;
+    justify-content:center;
+}
+
+%flex-row-fs{
+    @extend %flex-row;
+    justify-content:flex-start;
+}
+
+%flex-row-fe{
+    @extend %flex-row;
+    justify-content:flex-end;
+}
+
+%flex-wrap{
+    flex-wrap:wrap;
+}
+
+@each $align in $align-content{
+    %align-content-#{$align}{
+        align-content: $align;
+    }
+}
+
+@each $align in $align-items{
+    %align-items-#{$align}{
+        align-items:$align;
+    }
+}
+
+%section{
+    padding:$section-padding-ltr;
+    &.white-bg{
+        background: whitesmoke;
+        & .section-title h2{
+            color:$color-theme;
+        }
+    }
+    &.theme-bg{
+        background:$color-theme;
+        & .section-title h2{
+            color:white;
+        }
+    }
+    &.dark-bg, &.bg-img{
+        background:black;
+        & .section-title h2{
+            color:$color-theme;
+        }
+        color:white;
+    }
+    & .section-title{
+        @extend %flex-column-center;
+        @extend %align-items-center;
+        text-align:center;
+        & h2{
+            font-size:3em;
+            padding:25px 0;
+        }
+
+        & p{
+            opacity:0.7;
+        }
+    }
+}
