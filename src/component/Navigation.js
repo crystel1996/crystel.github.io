@@ -6,10 +6,12 @@ import useScroll from '../hook/useScroll.js';
 import {NAVLINKS} from '../data/data.js';
 import Logo from './Logo.js';
 
+const BASE_URL = 'crystel.github.io';
+
 const NavLink = ({href,text,collapse}) => {
     
     return <li>
-        <a href={"/#"+href} className={window.location.hash == '#'+href ? ' active' : ''} onClick={collapse}>{text}</a>
+        <a href={"/"+BASE_URL+"/#"+href} className={window.location.hash == '#'+href ? ' active' : ''} onClick={collapse}>{text}</a>
     </li>
 }
 
