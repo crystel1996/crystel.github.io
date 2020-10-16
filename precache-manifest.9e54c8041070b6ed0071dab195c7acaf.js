@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2264d31a332f77db1e6b0fedae0799a",
+    "revision": "dfa0198eee9234df4ac46d9d0c297daa",
     "url": "/crystel.github.io/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/crystel.github.io/static/css/2.5b2fee88.chunk.css"
   },
   {
-    "revision": "46beaf658ae5abde04f8",
+    "revision": "7c248620cd2e38da9d99",
     "url": "/crystel.github.io/static/css/main.6e0a3759.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/crystel.github.io/static/js/2.2a2362a6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "46beaf658ae5abde04f8",
-    "url": "/crystel.github.io/static/js/main.bb697202.chunk.js"
+    "revision": "7c248620cd2e38da9d99",
+    "url": "/crystel.github.io/static/js/main.a91f4167.chunk.js"
   },
   {
     "revision": "adcb723bae7585e01bf9",
