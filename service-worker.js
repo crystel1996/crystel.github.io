@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/crystel.github.io/precache-manifest.9e54c8041070b6ed0071dab195c7acaf.js"
+  "/crystel.github.io/precache-manifest.9988bf7fd978d11bf9bfaa4e60c43b9b.js"
 );
 
 self.addEventListener('message', (event) => {

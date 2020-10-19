@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dfa0198eee9234df4ac46d9d0c297daa",
+    "revision": "9401b623acfd29e5cd0e883a70cb229b",
     "url": "/crystel.github.io/index.html"
   },
   {
